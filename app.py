@@ -19,7 +19,7 @@ AUTH_USERNAME = os.getenv('AUTH_USERNAME', 'admin')
 AUTH_PASSWORD = os.getenv('AUTH_PASSWORD', 'password')
 
 # Google Apps Script URL from env
-API_URL = os.getenv('API_URL', 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec')
+API_URL = os.getenv('API_URL', 'https://script.google.com/macros/s/AKfycbwhkCTWq9weyGFZEhr-PARqqoxNbdL0Hljo-9AiEO6FsVntJ1rPvsNNkosBlEyGijGpng/exec')
 API_PASSWORD = os.getenv('API_PASSWORD', 'mySecurePassword123')
 
 # Configure upload folder for attachments
