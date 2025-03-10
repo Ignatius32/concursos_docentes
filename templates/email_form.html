@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Compose Email{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Compose Email</h3>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="{{ url_for('email_form') }}" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="to" class="form-label">To <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="to" name="to" 
+                       placeholder="recipient@example.com, another@example.com" required>
+                <small class="text-muted">Separate multiple email addresses with commas</small>
+            </div>
+            
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="subject" name="subject" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="from_name" class="form-label">From Name</label>
+                <input type="text" class="form-control" id="from_name" name="from_name" 
+                       placeholder="Your Name">
+                <small class="text-muted">The name that will appear as sender</small>
+            </div>
+            
+            <div class="mb-3">
+                <label for="body" class="form-label">Message Body <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="body" name="body" rows="10" required></textarea>
+                <small class="text-muted">HTML is supported</small>
+            </div>
+            
+            <div class="mb-3">
+                <label for="attachments" class="form-label">Attachments</label>
+                <input type="file" class="form-control" id="attachments" name="attachments" multiple>
+                <small class="text-muted">You can select multiple files</small>
+            </div>
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="reset" class="btn btn-secondary me-md-2">Clear</button>
+                <button type="submit" class="btn btn-primary">Send Email</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Add rich text editor if desired
+    document.addEventListener('DOMContentLoaded', function() {
+        // This space can be used to initialize a WYSIWYG editor 
+        // for the body field if you want to add that feature later
+    });
+</script>
+{% endblock %}

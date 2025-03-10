@@ -1,0 +1,22 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+__pycache__/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
